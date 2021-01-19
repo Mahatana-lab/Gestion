@@ -23,5 +23,5 @@ liste:
    controller: App\Controller\UserController::ShowUser
 
 user_detail:
-   path: /detail/{statut}
+   path: /detail
    controller: App\Controller\UserController::showDetailsHistocal

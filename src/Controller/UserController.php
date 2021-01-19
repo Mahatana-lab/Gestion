@@ -43,16 +43,16 @@ class UserController extends AbstractController
     /**
      * @Route("/detail/{statut}", name="user_detail")
      */
-    public function showDetailsHistocal(UserRepository $userrepository, string $statut){
-        $checkstatutEnabled = $userrepository->findByStatus("enabled");
-        $checkstatutInitiated = $userrepository->findByStatus("disabled");
-
-        return $this->render('user/liste.html.twig', array(
+    public function showDetailsHistocal(UserRepository $userrepository, string $statut)
+    {
+        $checkstatutEnabled = $userrepository->findByid("enabled");
+        $checkstatutInitiated = $userrepository->findByid("disabled");
+    
+        return  $this->render('user/detail.html.twig',array(
             "userEnabled" => $checkstatutEnabled,
             "userDisabled" => $checkstatutInitiated,
             "statut" => $statut
         ));
-
     }
 
 }
