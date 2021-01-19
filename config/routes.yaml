@@ -1,0 +1,27 @@
+#index: #zay ao am @routecontroller  de lé name
+#   path: / #zay tina atao chemin-ny
+#   controller: App\Controller\DefaultController::index #index(zay ao amfunction tina apesaina am controller)
+
+security_registration:
+   path: /inscription
+   controller: App\Controller\SecurityController::registration
+
+security_login:
+   path: /connexion
+   controller: App\Controller\SecurityController::login
+
+home:
+   path: /
+   controller: App\Controller\UserController::home
+
+security_logout:
+   path: /deconnexion
+   controller: App\Controller\UserController::home
+
+liste:
+   path: /listeU
+   controller: App\Controller\UserController::ShowUser
+
+user_detail:
+   path: /detail/{statut}
+   controller: App\Controller\UserController::showDetailsHistocal
