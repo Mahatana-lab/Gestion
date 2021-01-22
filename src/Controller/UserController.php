@@ -30,7 +30,7 @@ class UserController extends AbstractController
         return $this->render('user/home.html.twig',array(
             
             "listeUser" => $listeUser
-            
+                        
         ));
         dump($listeUser);die;
     }
