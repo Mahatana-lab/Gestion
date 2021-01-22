@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -23,8 +24,15 @@ class UserController extends AbstractController
     /**
     * @Route("/", name="home")
     */
-   public function home() {
-        return $this->render('user/home.html.twig');
+   public function home(UserRepository $userrepository) {
+        $listeUser=$userrepository->findAll();
+        $User=$userrepository->findAll();
+        return $this->render('user/home.html.twig',array(
+            
+            "listeUser" => $listeUser
+            
+        ));
+        dump($listeUser);die;
     }
     /**
      * @Route("/listeU", name="liste")
@@ -39,20 +47,6 @@ class UserController extends AbstractController
     
     
     }
+   
     
-    /**
-     * @Route("/detail/{statut}", name="user_detail")
-     */
-    public function showDetailsHistocal(UserRepository $userrepository, string $statut)
-    {
-        $checkstatutEnabled = $userrepository->findByid("enabled");
-        $checkstatutInitiated = $userrepository->findByid("disabled");
-    
-        return  $this->render('user/detail.html.twig',array(
-            "userEnabled" => $checkstatutEnabled,
-            "userDisabled" => $checkstatutInitiated,
-            "statut" => $statut
-        ));
-    }
-
 }

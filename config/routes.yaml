@@ -22,6 +22,3 @@ liste:
    path: /listeU
    controller: App\Controller\UserController::ShowUser
 
-user_detail:
-   path: /detail
-   controller: App\Controller\UserController::showDetailsHistocal
