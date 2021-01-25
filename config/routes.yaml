@@ -22,3 +22,10 @@ liste:
    path: /listeU
    controller: App\Controller\UserController::ShowUser
 
+commande:
+   path: /commande
+   controller: App\Controller\CommandeController::index
+client:
+   path: /client
+   controller: App\Controller\ClientController::index
+   
