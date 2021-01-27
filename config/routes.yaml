@@ -28,4 +28,8 @@ commande:
 client:
    path: /client
    controller: App\Controller\ClientController::index
+
+fournisseur:
+      path: /fournisseur
+      controller: App\Controller\FournisseurController::index 
    
