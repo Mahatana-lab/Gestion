@@ -32,4 +32,4 @@ client:
 fournisseur:
       path: /fournisseur
       controller: App\Controller\FournisseurController::index 
-   
+
