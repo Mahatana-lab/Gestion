@@ -1,23 +1,83 @@
 {% extends "base.html.twig" %}
-
+{% block stylesheets %}
+       <style>
+            body{
+                background-image: url('assets/images/gk1.jpg');
+                font-size: 2rem;
+               /* background-color: #DCDCDC;*/
+            }
+            
+            
+            
+                  
+            }
+            .centerXY{
+                font-size: 80px;
+                color: red;
+                background-image:url("Images/Test_Cadre.JPG");
+                text-align: center;
+                line-height: 160px;
+                width: 591px;
+                height: 191px;
+                margin-left:auto;
+                margin-right:auto;
+           
+            }
+            .pos-b{
+                padding: 50px;
+                float: right;
+                margin-top: 100px;
+            }
+           div {
+            text-align:center;
+            }
+           .container{
+               
+           }
+           .tab1{
+               padding: 30px;
+               background-image: url('assets/images/lo.jpg');
+               opacity: 0.7;
+               border: 5px solid;
+               box-shadow: 0px 0px 15px 1px;
+               border-radius: 10px;
+               width: 500px;
+               /*display: flex;*/
+               margin-left: auto;
+               margin-right: auto;
+               margin-right: auto;
+               margin-top: 30%;
+                        
+           }
+           h1{
+               color: #336699;
+           }
+       </style>     
+{% endblock %}
 {% block body %}
-    <h1>Connexion</h1>
+        {#<img class="pos-a" src="{{ asset('assets/images/log.png') }}" alt=""></img>#}
+        <img class="pos-b centerXY" src="{{ asset('assets/images/logo-creatic.png') }}" alt=""></img>
+    <div class="container">   
+        <div class="tab1">
+            <h1>Authentification</h1>
+            
+            <form action="{{ path('security_login') }}" method="post">
 
-    <form action="{{ path('security_login') }}" method="post">
+                    <div class="form-group">
+                        <input placeholder="Adresse email..." required name="_username"
+                        type="text" class="form-control">
+                    </div>
 
-            <div class="form-group">
-                <input placeholder="Adresse email..." required name="_username"
-                type="text" class="form-control">
-            </div>
+                    <div class="form-group">
+                        <input placeholder="Mot de passe..." required name="_password"
+                        type="password" class="form-control">
+                    </div>
 
-            <div class="form-group">
-                <input placeholder="Mot de passe..." required name="_password"
-                 type="password" class="form-control">
-            </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success">Connexion</button>
+                    </div>
 
-            <div class="form-group">
-                <button type="submit" class="btn btn-success">Connexion !</button>
-            </div>
-
-    </form>
+            </form>
+        </div>    
+    </div>   
 {% endblock %}

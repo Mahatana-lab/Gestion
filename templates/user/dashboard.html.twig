@@ -1,10 +1,8 @@
 {% extends "base.html.twig" %}
-
-{% form_theme form 'bootstrap_4_layout.html.twig' %}
 {% block stylesheets %}
     <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
-    
-<style>
+    <style>
+        
       
         body{
                 background-image: url('assets/images/gk1.jpg');
@@ -12,7 +10,9 @@
                /* background-color: #DCDCDC;*/
             
         }
-        .sidenav {
+
+        
+                .sidenav {
                 height: 100%;
                 width: 0;
                 position: fixed;
@@ -50,25 +50,21 @@
                 .sidenav {padding-top: 15px;}
                 .sidenav a {font-size: 18px;}
                 }
-              .contenu1{
+                .contenu1{
                     margin-top:-2%;
                 }
-
-
-
+            
+                    
     </style>
 {% endblock %}
-
 {% block body %}
-  <div class="contenu1">
-    <body>
-       <nav class = "navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="contenu1">
+        <nav class = "navbar navbar-expand-lg navbar-dark bg-primary">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-      
-            {#<div class="collapse navbar-collapse" id="navbarColor01">#}
-            
+
+            <div class="collapse navbar-collapse" id="navbarColor01">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
                         <a class="nav-link" href="/connexion">ACCUEIL
@@ -116,8 +112,6 @@
                     <input class="form-control mr-sm-2" type="text" placeholder="Search">
                     <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
                 </form>#}
-              
-          {#</div>#}
 
                     <div id="mySidenav" class="sidenav">
                         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -140,30 +134,9 @@
                         document.getElementById("mySidenav").style.width = "0";
                         }
                     </script>
-      
-      </nav> 
-    </body>
-  </div>  
-      <div class="container">    
-        <h1>Inscription</h1>
-        
-        {{ form_start(form)}} 
 
-        {{ form_row(form.username, {'label': 'Nom d\'utilisateur','attr': {'placeholder' : 'Nom d\'utilisateur...'}}) }}
-        {{ form_row(form.email, {'label': 'Adresse email','attr':{'placeholder':'Adresse email...'}}) }}
-        {{ form_row(form.password, {'label': 'Mot de passe','attr':{'placeholder':'Mot de passe !'}}) }}
-        {{ form_row(form.confirm_password, {'label':'Confirmation du mot de passe', 'attr':{'placeholder':'Répétez votre mot de passe'}}) }}
-
-        <button type="submit" class="btn btn-success">Inscription</button>
-        {{ form_end(form)}}
-      
-
-      </div>
-    
-      {#<div class="container">#}
-
-      
-      
-  
+            </div>    
+       
+        </nav>
+    </div>   
 {% endblock %}
-      

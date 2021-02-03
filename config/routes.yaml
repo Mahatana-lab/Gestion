@@ -3,7 +3,7 @@
 #   controller: App\Controller\DefaultController::index #index(zay ao amfunction tina apesaina am controller)
 
 security_registration:
-   path: /inscription
+   path: /registration
    controller: App\Controller\SecurityController::registration
 
 security_login:
@@ -33,3 +33,6 @@ fournisseur:
       path: /fournisseur
       controller: App\Controller\FournisseurController::index 
 
+tableau_de_bord:
+      path: /dashboard
+      controller: App\Controller\UserController::Showdashboard 
