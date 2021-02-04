@@ -45,11 +45,5 @@ class UserController extends AbstractController
     return $this->render('user/liste.html.twig');
      
     }
-   /**
-    * @Route("/dashboard", name="tableau_de_bord")
-    */
-    public function Showdashboard(){
-        return $this->render('user/dashboard.html.twig');
-    }
-    
+   
 }

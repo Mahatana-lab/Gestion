@@ -10,8 +10,8 @@ security_login:
    path: /connexion
    controller: App\Controller\SecurityController::login
 
-home:
-   path: /
+Userlist:
+   path: /userlist
    controller: App\Controller\UserController::home
 
 security_logout:
@@ -33,6 +33,10 @@ fournisseur:
       path: /fournisseur
       controller: App\Controller\FournisseurController::index 
 
-tableau_de_bord:
-      path: /dashboard
-      controller: App\Controller\UserController::Showdashboard 
+table:
+   path: /table
+   controller: App\Controller\DashboardController::table_liste
+ 
+dash:
+   path: /dash   
+   controller: App\Controller\DashboardController::table_bord
