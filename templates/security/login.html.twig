@@ -1,4 +1,8 @@
-{% extends "base.html.twig" %}
+<link rel="stylesheet" href="{{ asset('assets/css/app.css') }}" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
+
+
 {% block stylesheets %}
        <style>
             body{
@@ -24,9 +28,9 @@
            
             }
             .pos-b{
-                padding: 50px;
+                
                 float: right;
-                margin-top: 100px;
+                margin-top: -200px;
             }
            div {
             text-align:center;
@@ -55,6 +59,7 @@
        </style>     
 {% endblock %}
 {% block body %}
+        <title>Login</title>
         {#<img class="pos-a" src="{{ asset('assets/images/log.png') }}" alt=""></img>#}
         <img class="pos-b centerXY" src="{{ asset('assets/images/logo-creatic.png') }}" alt=""></img>
     <div class="container">   

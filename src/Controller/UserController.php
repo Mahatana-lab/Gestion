@@ -22,7 +22,7 @@ class UserController extends AbstractController
 
     
     /**
-    * @Route("/", name="home")
+    * @Route("/userlist", name="Userlist")
     */
    public function home(UserRepository $userrepository) {
         $listeUser=$userrepository->findAll();
